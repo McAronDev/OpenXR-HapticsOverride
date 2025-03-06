@@ -1,0 +1,101 @@
+{
+  "version": 6,
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "generator": "Visual Studio 17 2022",
+      "binaryDir": "${sourceDir}/out/build/${presetName}"
+    },
+    {
+      "name": "x64-debug",
+      "displayName": "x64 Debug",
+      "inherits": "base",
+      "architecture": {
+        "value": "x64"
+      }
+    },
+    {
+      "name": "x64-release",
+      "displayName": "x64 Release",
+      "inherits": "x64-debug"
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "base",
+      "cleanFirst": true,
+      "hidden": true
+    },
+    {
+      "name": "x64-debug",
+      "configurePreset": "x64-debug",
+      "displayName": "x64 Debug",
+      "inherits": "base",
+      "configuration": "Debug"
+    },
+    {
+      "name": "x64-release",
+      "configurePreset": "x64-release",
+      "displayName": "x64 Release",
+      "inherits": "base",
+      "configuration": "Release"
+    }
+  ],
+  "packagePresets": [
+    {
+      "name": "base",
+      "hidden": true
+    },
+    {
+      "name": "x64-debug",
+      "configurePreset": "x64-debug",
+      "displayName": "x64 Debug",
+      "inherits": "base",
+      "configurations": [ "Debug" ]
+    },
+    {
+      "name": "x64-release",
+      "configurePreset": "x64-release",
+      "displayName": "x64 Release",
+      "inherits": "base"
+    }
+  ],
+  "workflowPresets": [
+    {
+      "name": "x64-debug",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x64-debug"
+        },
+        {
+          "type": "build",
+          "name": "x64-debug"
+        },
+        {
+          "type": "package",
+          "name": "x64-debug"
+        }
+      ]
+    },
+    {
+      "name": "x64-release",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x64-release"
+        },
+        {
+          "type": "build",
+          "name": "x64-release"
+        },
+        {
+          "type": "package",
+          "name": "x64-release"
+        }
+      ]
+    }
+  ]
+
+}

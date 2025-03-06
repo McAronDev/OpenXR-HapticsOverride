@@ -1,0 +1,14 @@
+{
+  "file_format_version": "1.0.0",
+  "api_layer": {
+    "name": "@LAYER_NAME@",
+    "library_path": "./@PROJECT_NAME@.dll",
+    "api_version": "1.0",
+    "implementation_version": "1",
+    "description": "Layer for overriding haptic feedback",
+    "functions": {
+      "xrNegotiateLoaderApiLayerInterface": "xrNegotiateLoaderApiLayerInterface"
+    },
+    "disable_environment": "@DISABLE_LAYER_ENV@"
+  }
+}
