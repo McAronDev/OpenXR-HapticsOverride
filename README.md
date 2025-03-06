@@ -13,7 +13,7 @@ If you have encountered this issue in another game, please contact me so I can a
 ## How to install
 
 0. Check the known issues below.
-1. Go to [Releases](./releases) section
+1. Go to [Releases](https://github.com/McAronDev/OpenXR-HapticsOverride/releases/) section
 2. Download last installer
 3. Install it
 
